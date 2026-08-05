@@ -11,7 +11,7 @@ cc_binary {
     vintf_fragments: ["android.hardware.usb-service.mediatek.xml"],
     vendor: true,
     cflags: select(soong_config_variable("android_hardware_mediatek_usb", "audio_accessory_supported"), {
-        true: ["-DUSB_AUDIO_ACCESSORY_SUPPORTED"],
+        "true": ["-DUSB_AUDIO_ACCESSORY_SUPPORTED"],
         default: [],
     }),
     srcs: [
